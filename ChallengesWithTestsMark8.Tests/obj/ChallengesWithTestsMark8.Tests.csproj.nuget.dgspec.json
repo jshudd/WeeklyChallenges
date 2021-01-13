@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj": {}
+    "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj": {}
   },
   "projects": {
-    "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj": {
+    "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
+        "projectUniqueName": "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
         "projectName": "ChallengesWithTestsMark8.Tests",
-        "projectPath": "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
-        "packagesPath": "/Users/michaeldoyle/.nuget/packages/",
-        "outputPath": "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/obj/",
+        "projectPath": "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/ChallengesWithTestsMark8.Tests.csproj",
+        "packagesPath": "/Users/truecoders/.nuget/packages/",
+        "outputPath": "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8.Tests/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/michaeldoyle/.config/NuGet/NuGet.Config"
+          "/Users/truecoders/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp3.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj": {
-                "projectPath": "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj"
+              "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj": {
+                "projectPath": "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj"
               }
             }
           }
@@ -41,17 +39,12 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.3.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.0, )",
-              "autoReferenced": true
             },
             "xunit": {
               "target": "Package",
@@ -74,33 +67,36 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj": {
+    "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
+        "projectUniqueName": "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
         "projectName": "ChallengesWithTestsMark8",
-        "projectPath": "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
-        "packagesPath": "/Users/michaeldoyle/.nuget/packages/",
-        "outputPath": "/Users/michaeldoyle/repos/WeeklyChallenges/ChallengesWithTestsMark8/obj/",
+        "projectPath": "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8/ChallengesWithTestsMark8.csproj",
+        "packagesPath": "/Users/truecoders/.nuget/packages/",
+        "outputPath": "/Users/truecoders/Documents/Trepos/WeeklyChallenges/ChallengesWithTestsMark8/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/michaeldoyle/.config/NuGet/NuGet.Config"
+          "/Users/truecoders/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp3.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -111,15 +107,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
-          "dependencies": {
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.0, )",
-              "autoReferenced": true
-            }
-          },
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -130,7 +119,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }
