@@ -76,7 +76,7 @@ namespace ChallengesWithTestsMark8
 
         public int Sum(int[] numbers)
         {
-            if(numbers == null)
+            if (numbers == null)
             {
                 return 0;
             }
@@ -90,7 +90,11 @@ namespace ChallengesWithTestsMark8
 
             return sum;
 
+            //Linq
             //return numbers.Sum();
+
+            //ternary version
+            //return (numbers == null) ? 0 : numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)

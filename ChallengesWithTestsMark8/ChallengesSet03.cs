@@ -21,14 +21,34 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            if(numbers == null || numbers.Count() == 0)
+            //HOW DOES THIS WORK?? ANSWER: Tests are flawed
+            //if (numbers == null || numbers.Count() == 0)
+            //{
+            //    return false;
+            //}
+
+            //var sum = numbers.Sum();
+
+            //return (sum % 2 != 0);
+
+            if (numbers == null)
             {
                 return false;
             }
 
-            var sum = numbers.Sum();
-          
-            return (sum % 2 != 0);
+            var odds = new List<int>();
+
+            foreach (var num in numbers)
+            {
+                if (num % 2 != 0)
+                {
+                    odds.Add(num);
+                }
+            }
+
+            var sumOdds = odds.Sum();
+
+            return (sumOdds % 2 != 0);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
@@ -67,13 +87,14 @@ namespace ChallengesWithTestsMark8
 
         public char GetFirstLetterOfString(string val)
         {
-            return val.First();
+            //return val[0];
+            return val.First(); //LINQ
         }
 
         public char GetLastLetterOfString(string val)
         {
-            return val[val.Length - 1];
-            
+            //return val[val.Length - 1];
+            return val.Last(); //LINQ
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
@@ -89,7 +110,8 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
-            return nums[nums.Length - 1] - nums[0];
+            //return nums[nums.Length - 1] - nums[0];
+            return nums.Last() - nums.First();
         }
 
         public int[] GetOddsBelow100()
