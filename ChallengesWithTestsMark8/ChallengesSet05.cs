@@ -81,7 +81,8 @@ namespace ChallengesWithTestsMark8
                 return "";
             }
 
-            sentence = sentence.Substring(0, sentence.Length - 1);
+            //sentence = sentence.Substring(0, sentence.Length - 1);
+            sentence = sentence.Trim();
             sentence += ".";
             return sentence;
         }
