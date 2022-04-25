@@ -66,8 +66,8 @@ namespace ChallengesWithTestsMark8
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            var amount = objs.Length;
-            var majority = (amount / 2) + 1;
+            //var amount = objs.Length;
+            var majority = (objs.Length / 2) + 1;
 
             var count = 0;
 
@@ -79,14 +79,16 @@ namespace ChallengesWithTestsMark8
                 }
             }
 
-            if(count >= majority)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            //if(count >= majority)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            return (count >= majority);
         }
 
         public double AverageEvens(int[] numbers)
@@ -108,7 +110,7 @@ namespace ChallengesWithTestsMark8
                 }
             }
 
-            if(count > 0)
+            if (count > 0)
             {
                 return sum / count;
             }
@@ -116,7 +118,8 @@ namespace ChallengesWithTestsMark8
             {
                 return 0;
             }
-            
+
+            //return (count > 0) ? sum / count : 0;
         }
 
         public int Factorial(int number)
