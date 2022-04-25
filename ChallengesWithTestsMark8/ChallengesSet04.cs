@@ -134,6 +134,8 @@ namespace ChallengesWithTestsMark8
             }
 
             return fact;
+
+            //return (number == 0) ? 1 : Enumerable.Range(1, number).Aggregate((f, s) => f * s);
         }
     }
 }
