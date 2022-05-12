@@ -111,29 +111,48 @@ namespace ChallengesWithTestsMark8
         public double[] GetEveryNthElement(List<double> elements, int n)
         {
             List<double> nthElement = new List<double>();
-            double[] nullCheck = new double[0];
 
-            if (elements == null)
+            if (elements == null || n <= 0 || n > elements.Count)
             {
-                return nullCheck;
+                return nthElement.ToArray();
             }
 
-            for (int i = 0; i < elements.Count; i++)
+            for (int i = n - 1; i < elements.Count; i += n)
             {
-                if (elements[i] % n == 0)
-                {
-                    nthElement.Add(elements[i]);
-                }
 
-                if (n < 0 || n > elements.Count)
-                {
-                    nthElement.Clear();
-                }
+
+                nthElement.Add(elements[i]);
+
             }
 
-            double[] finalArray = nthElement.ToArray();
+            return nthElement.ToArray();
 
-            return finalArray;
+            //Previous Answer
+            //List<double> nthElement = new List<double>();
+            //double[] nullCheck = new double[0];
+
+            //if (elements == null)
+            //{
+            //    return nullCheck;
+            //}
+
+            //for (int i = 0; i < elements.Count; i++)
+            //{
+            //    //why checking value of element instead of nth element??
+            //    if (elements[i] % n == 0)
+            //    {
+            //        nthElement.Add(elements[i]);
+            //    }
+
+            //    if (n < 0 || n > elements.Count)
+            //    {
+            //        nthElement.Clear();
+            //    }
+            //}
+
+            //double[] finalArray = nthElement.ToArray();
+
+            //return finalArray;
         }
     }
 }
