@@ -111,7 +111,10 @@ namespace ChallengesWithTestsMark8
         public int LastMinusFirst(int[] nums)
         {
             //return nums[nums.Length - 1] - nums[0];
-            return nums.Last() - nums.First();
+
+            return nums[^1] - nums[0];
+
+            //return nums.Last() - nums.First();
         }
 
         public int[] GetOddsBelow100()
