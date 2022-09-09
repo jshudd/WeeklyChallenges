@@ -8,7 +8,10 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            return char.IsLetter(c);
+            //return char.IsLetter(c);
+
+            var alpha = "abcdefghijklmnopqrstuvwxyz";
+            return alpha.Contains(char.ToLower(c));
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -49,17 +52,21 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            if(numbers == null)
-            {
-                return 0;
-            }
+            //if(numbers == null)
+            //{
+            //    return 0;
+            //}
 
-            if (numbers.Count() == 0)
-            {
-                return 0;
-            }
+            //if (numbers.Count() == 0)
+            //{
+            //    return 0;
+            //}
 
-            return numbers.Min() + numbers.Max();
+            //Not working for null when .Count is uncommented
+            //return numbers?.Min() + numbers?.Max() ?? 0;
+
+            //Nate Seilaff's answer
+            return numbers?.Any() ?? false ? numbers.Min() + numbers.Max() : new double { };
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -146,7 +153,7 @@ namespace ChallengesWithTestsMark8
 
             //return count;
 
-            if(number <= 0)
+            if (number <= 0)
             {
                 return 0;
             }
@@ -154,6 +161,9 @@ namespace ChallengesWithTestsMark8
             {
                 return number / 2;
             }
+
+            //ternary
+            //return (number <= 0) ? 0 : number / 2;
         }
     }
 }
