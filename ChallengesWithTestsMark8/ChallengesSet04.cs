@@ -30,9 +30,12 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            var list = new List<int> { str1.Length, str2.Length, str3.Length, str4.Length };
+            var list = new List<int>() { str1.Length, str2.Length, str3.Length, str4.Length };
 
             return list.Min();
+
+            //var list = new List<string>() { str1, str2, str3, str4 };
+            //return list.Min(x => x.Length);
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
@@ -59,86 +62,96 @@ namespace ChallengesWithTestsMark8
 
         public bool IsStringANumber(string input)
         {
-            var isNumber = double.TryParse(input, out double number);
+            //var isNumber = double.TryParse(input, out double number);
 
-            return isNumber;
+            //return isNumber;
+
+            return double.TryParse(input, out double number);            
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
             //var amount = objs.Length;
-            var majority = (objs.Length / 2) + 1;
+            //var majority = (objs.Length / 2) + 1;
 
-            var count = 0;
+            //var count = 0;
 
-            foreach (var obj in objs)
-            {
-                if (obj == null)
-                {
-                    count++;
-                }
-            }
-
-            //if(count >= majority)
+            //foreach (var obj in objs)
             //{
-            //    return true;
-            //}
-            //else
-            //{
-            //    return false;
+            //    if (obj == null)
+            //    {
+            //        count++;
+            //    }
             //}
 
-            return (count >= majority);
+            //return (count >= majority);
+
+            return objs.GroupBy(x => x).Max(x => x == null);
         }
 
         public double AverageEvens(int[] numbers)
         {
-            double sum = 0;
-            double count = 0;
+            //double sum = 0;
+            //double count = 0;
 
-            if(numbers == null)
-            {
-                return 0;
-            }
+            //if(numbers == null)
+            //{
+            //    return 0;
+            //}
 
-            foreach(var num in numbers)
-            {
-                if(num % 2 == 0)
-                {
-                    sum += num; //sum = sum + num
-                    count++;
-                }
-            }
+            //foreach(var num in numbers)
+            //{
+            //    if(num % 2 == 0)
+            //    {
+            //        sum += num; //sum = sum + num
+            //        count++;
+            //    }
+            //}
 
-            if (count > 0)
-            {
-                return sum / count;
-            }
-            else
-            {
-                return 0;
-            }
+            //if (count > 0)
+            //{
+            //    return sum / count;
+            //}
+            //else
+            //{
+            //    return 0;
+            //}
 
+            //My 1 line answer
             //return (count > 0) ? sum / count : 0;
+
+            //Amoriss' answer
+            try
+            {
+                return numbers.Where(x => x % 2 == 0).Average();
+            }
+            catch (ArgumentNullException)
+            {
+                return 0;
+            }
+            catch (InvalidOperationException)
+            {
+                return 0;
+            }
         }
 
         public int Factorial(int number)
         {
-            var fact = 1;
+            //var fact = 1;
 
-            if(number < 0)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
+            //if(number < 0)
+            //{
+            //    throw new ArgumentOutOfRangeException();
+            //}
 
-            for(int i = number; i > 0; i--)
-            {
-                fact *= i;
-            }
+            //for(int i = number; i > 0; i--)
+            //{
+            //    fact *= i;
+            //}
 
-            return fact;
+            //return fact;
 
-            //return (number == 0) ? 1 : Enumerable.Range(1, number).Aggregate((f, s) => f * s);
+            return (number == 0) ? 1 : Enumerable.Range(1, number).Aggregate((f, s) => f * s);
         }
     }
 }

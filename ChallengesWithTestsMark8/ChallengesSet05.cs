@@ -7,6 +7,15 @@ namespace ChallengesWithTestsMark8
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
+            //Amoriss' answer
+            //startNumber++;
+
+            //while (startNumber % n != 0)
+            //{
+            //    startNumber++;
+            //}
+            //return startNumber;
+
             return ((startNumber / n) + 1) * n;
         }
 
