@@ -10,7 +10,7 @@ namespace ChallengesWithTestsMark8
         {
             //for (int i = 0; i < vals.Length; i++)
             //{
-            //    if(vals[i] == false)
+            //    if (vals[i] == false)
             //    {
             //        return true;
             //    }
@@ -33,7 +33,7 @@ namespace ChallengesWithTestsMark8
 
             //return (sum % 2 != 0);
 
-            //regular answer
+            //Class answer
             //if (numbers == null)
             //{
             //    return false;
@@ -80,7 +80,7 @@ namespace ChallengesWithTestsMark8
             //    }
             //}
 
-            //if(isLower == true && isUpper == true && isNumber == true)
+            //if (isLower == true && isUpper == true && isNumber == true)
             //{
             //    return true;
             //}
@@ -104,14 +104,14 @@ namespace ChallengesWithTestsMark8
         {
             //return val[val.Length - 1];
 
-            //return val[^1];
+            return val[^1];
 
-            return val.Last(); //LINQ
+            //return val.Last(); //LINQ
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            //if(divisor == 0)
+            //if (divisor == 0)
             //{
             //    return 0;
             //}
@@ -136,7 +136,7 @@ namespace ChallengesWithTestsMark8
 
             //for (int i = 0; i < 100; i++)
             //{
-            //    if(i % 2 != 0)
+            //    if (i % 2 != 0)
             //    {
             //        list.Add(i);
             //    }
@@ -144,6 +144,7 @@ namespace ChallengesWithTestsMark8
 
             //return list.ToArray();
 
+            //LINQ
             return Enumerable.Range(0, 100).Where(x => x % 2 != 0).ToArray();
         }
 
@@ -156,6 +157,8 @@ namespace ChallengesWithTestsMark8
             }
                        
         }
+
+
 
         //Not included for students anymore vvv
 

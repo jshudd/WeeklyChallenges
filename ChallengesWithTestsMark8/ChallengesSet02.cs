@@ -12,6 +12,9 @@ namespace ChallengesWithTestsMark8
 
             //var alpha = "abcdefghijklmnopqrstuvwxyz";
             //return alpha.Contains(char.ToLower(c));
+
+            //Alternative Answer
+            //return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -58,26 +61,46 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            //if(numbers == null)
+            //if (numbers == null || numbers.Count() == 0)
             //{
             //    return 0;
             //}
 
-            //if (numbers.Count() == 0)
+            //double min = 0;
+            //double max = 0;
+
+            //foreach (var num in numbers)
             //{
-            //    return 0;
+            //    if (num > max)
+            //    {
+            //        max = num;
+            //    }
+
+            //    if (num < min)
+            //    {
+            //        min = num;
+            //    }
+
+            //    //Handles Count of 1 
+            //    if (numbers.Count() <= 1)
+            //    {
+            //        min = num;
+            //    }
             //}
 
-            //Not working for null when .Count is uncommented
-            //return numbers?.Min() + numbers?.Max() ?? 0;
+            //return min + max;
+
+            //Alternate answer
+            return (numbers == null || numbers.Count() == 0) ? 0 : numbers.Min() + numbers.Max();
 
             //Nate Seilaff's answer
-            return numbers?.Any() ?? false ? numbers.Min() + numbers.Max() : new double { };
+            //return numbers?.Any() ?? false ? numbers.Min() + numbers.Max() : new double { };
+            //return numbers?.Any() ?? false ? numbers.Min() + numbers.Max() : 0;
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            //if(str1.Length < str2.Length)
+            //if (str1.Length < str2.Length)
             //{
             //    return str1.Length;
             //}
@@ -106,15 +129,17 @@ namespace ChallengesWithTestsMark8
             //return sum;
 
             //Linq
-            return numbers?.Sum() ?? 0;
+            //return numbers?.Sum() ?? 0;
 
             //ternary version
-            //return (numbers == null) ? 0 : numbers.Sum();
+            //Show 1st
+            //return numbers.Sum();
+            return (numbers == null) ? 0 : numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)
         {
-            //if(numbers == null)
+            //if (numbers == null)
             //{
             //    return 0;
             //}
@@ -123,7 +148,7 @@ namespace ChallengesWithTestsMark8
 
             //for (int i = 0; i < numbers.Length; i++)
             //{
-            //    if(numbers[i] % 2 == 0)
+            //    if (numbers[i] % 2 == 0)
             //    {
             //        evenSum += numbers[i];
             //    }
@@ -136,10 +161,19 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOdd(List<int> numbers)
         {
-            //if(numbers == null)
+            //if (numbers == null)
             //{
             //    return false;
             //}
+
+            //var sum = 0;
+
+            //for (var i = 0; i < numbers.Count; i++)
+            //{
+            //    sum += numbers[i];
+            //}
+
+            //return (sum % 2 != 0);
 
             //Couldn't get null coalescing to work; below works with null
             return (numbers == null) ? false : (numbers.Sum() % 2 != 0);
@@ -147,23 +181,6 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            //var count = 0;
-
-            //if(number == 1 || number <= 0)
-            //{
-            //    return 0;
-            //}
-
-            //for (long i = number; i > 0; i--)
-            //{
-            //    if(i % 2 == 0)
-            //    {
-            //        count++;
-            //    }
-            //}
-
-            //return count;
-
             //if (number <= 0)
             //{
             //    return 0;
