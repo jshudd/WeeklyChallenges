@@ -45,7 +45,7 @@ namespace ChallengesWithTestsMark8
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "HEY!";
         }
     }
 }
