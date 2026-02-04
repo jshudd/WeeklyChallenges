@@ -65,7 +65,7 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            return number < 0 ? 0 : number / 2;
         }
     }
 }
