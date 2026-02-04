@@ -29,7 +29,8 @@ namespace ChallengesWithTestsMark8
 
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            //return val[val.Length - 1];
+            return val.Last();
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
