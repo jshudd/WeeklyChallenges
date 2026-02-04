@@ -39,7 +39,7 @@ namespace ChallengesWithTestsMark8
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            return numbers == null ? 0 : numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)
