@@ -67,6 +67,8 @@ namespace ChallengesWithTestsMark8
             {
                 words[i] = words[i].ToUpper();
             }
+
+            //words.Select(w => w.ToUpper()).ToArray();
         }
     }
 }
