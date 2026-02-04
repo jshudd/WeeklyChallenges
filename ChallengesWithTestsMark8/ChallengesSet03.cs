@@ -13,7 +13,7 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            return numbers == null ? false : numbers.Sum() % 2 != 0;
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
