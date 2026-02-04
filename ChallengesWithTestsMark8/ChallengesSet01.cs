@@ -6,14 +6,16 @@ namespace ChallengesWithTestsMark8
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
-            if(num1 == num2)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            //if(num1 == num2)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            return num1 == num2 ? true : false;
         }
 
         public double Subtract(double minuend, double subtrahend)
