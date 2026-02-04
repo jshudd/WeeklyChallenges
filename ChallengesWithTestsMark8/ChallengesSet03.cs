@@ -47,8 +47,8 @@ namespace ChallengesWithTestsMark8
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
-        }
+            return Enumerable.Range(1, 99).Where(n => n % 2 != 0).ToArray();
+		}
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
