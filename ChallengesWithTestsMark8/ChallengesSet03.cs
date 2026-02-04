@@ -40,7 +40,9 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            //return nums[^1] - nums[0];
+
+            return nums.Last() - nums.First();
         }
 
         public int[] GetOddsBelow100()
