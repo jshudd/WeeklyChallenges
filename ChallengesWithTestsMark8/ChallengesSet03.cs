@@ -23,7 +23,8 @@ namespace ChallengesWithTestsMark8
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            //return val[0];
+            return val.First();
         }
 
         public char GetLastLetterOfString(string val)
