@@ -47,7 +47,18 @@ namespace ChallengesWithTestsMark8
 
         public int[] GetOddsBelow100()
         {
-            return Enumerable.Range(1, 99).Where(n => n % 2 != 0).ToArray();
+			var ints = new List<int>();
+
+			for (int i = 0; i < 100; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    ints.Add(i);
+                }
+            }
+            return ints.ToArray();
+
+            //return Enumerable.Range(1, 99).Where(n => n % 2 != 0).ToArray();
 		}
 
         public void ChangeAllElementsToUppercase(string[] words)
