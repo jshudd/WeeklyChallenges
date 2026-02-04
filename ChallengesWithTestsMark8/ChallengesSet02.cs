@@ -60,7 +60,7 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            return numbers == null ? false : numbers.Sum() % 2 != 0;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
