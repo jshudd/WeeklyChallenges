@@ -78,7 +78,16 @@ namespace ChallengesWithTestsMark8
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
+            if (elements == null)
+                return new double[0];
+
+            var fourths = new List<double>();
+            for (var i = 3; i <= elements.Count - 1; i += 4)
+            {
+                fourths.Add(elements[i]);
+            }
+
+            return fourths.ToArray();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
