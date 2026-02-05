@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -17,7 +18,13 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-            throw new NotImplementedException();
+            //foreach (var bus in businesses)
+            //{
+            //    if (bus.TotalRevenue <= 0)
+            //        bus.Name = "CLOSED";
+            //}
+
+            businesses.ToList().Where(x => x.TotalRevenue == 0).ToList().ForEach(y => y.Name = "CLOSED");
         }
 
         public bool IsAscendingOrder(int[] numbers)
