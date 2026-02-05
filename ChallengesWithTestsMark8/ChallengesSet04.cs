@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ChallengesWithTestsMark8
 {
@@ -53,7 +54,20 @@ namespace ChallengesWithTestsMark8
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            //return numbers == null || numbers.Length == 0 ? 0 : numbers.Where(x => x % 2 == 0).Average();
+
+            if (numbers == null)
+            {
+                return 0;
+            }
+
+            var evens = new List<double>();
+            foreach (var num in numbers)
+            {
+                if (num % 2 == 0)
+                    evens.Add(num);
+            }
+            return evens == null || evens.Count == 0 ? 0 : evens.Average();
         }
 
         public int Factorial(int number)
