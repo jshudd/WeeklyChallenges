@@ -72,7 +72,18 @@ namespace ChallengesWithTestsMark8
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            if (number < 0)
+                throw new ArgumentOutOfRangeException();
+
+			if (number == 0)
+                return 1;
+
+            var total = number;
+            for (var i = number-1; i > 0; i--)
+            {
+                total *= i;
+            }
+            return total;
         }
     }
 }
