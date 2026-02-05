@@ -40,7 +40,15 @@ namespace ChallengesWithTestsMark8
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            //return objs.Where(x => x == null).Count > (objs.Length / 2);
+
+            var nulls = new List<object>();
+            foreach (var  obj in objs)
+            {
+                if (obj == null)
+                    nulls.Add(obj);
+            }
+            return nulls.Count > objs.Length/2;
         }
 
         public double AverageEvens(int[] numbers)
